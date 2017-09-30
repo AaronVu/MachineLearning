@@ -8,9 +8,9 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui
-import src.common.CodeImageUtil
-import  src.database.DBHelper
-import src.ui.mainForm as mainForm
+import common.CodeImageUtil
+import  database.DBHelper
+import ui.mainForm as mainForm
 
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
