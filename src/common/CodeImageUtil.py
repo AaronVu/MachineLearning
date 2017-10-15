@@ -52,7 +52,7 @@ class CodeImageGen:
 #gen.gen_img()
 #图片增强
 
-img = Image.open("E:\\workspace_vme\\ui\\bg1.jpg")
-im = img.filter(ImageFilter.DETAIL)
-im.save("E:\\workspace_vme\\ui\\bg2.jpg")
-print(im)
+# img = Image.open("E:\\workspace_vme\\ui\\bg1.jpg")
+# im = img.filter(ImageFilter.DETAIL)
+# im.save("E:\\workspace_vme\\ui\\bg2.jpg")
+# print(im)

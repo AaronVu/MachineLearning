@@ -1,6 +1,6 @@
 #coding: utf-8
 
-import  pymysql
+import pymysql
 import traceback
 import src.common.loadconf as config
 import os

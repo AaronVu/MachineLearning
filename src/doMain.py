@@ -8,3 +8,5 @@ if __name__ == '__main__':
     window = src.ui.loginForm.Ui_Form()
     window.show()
     sys.exit(app.exec_())
+
+
