@@ -51,7 +51,6 @@ def start():
     with tf.name_scope('train'):
         train_step = tf.train.GradientDescentOptimizer(0.1).minimize(loss)
         
-
     init = tf.initialize_all_variables()
 
     with tf.Session() as sess:
@@ -59,7 +58,7 @@ def start():
         sess.run(init)
         for i in range(1000):
             sess.run(train_step, feed_dict={xs: x_data, ys: y_data})
-            if i % 10 == 0:
+            if i % 5 == 0:
                 try:
                     ax.lines.remove(lines[0])
                 except Exception:

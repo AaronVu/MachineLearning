@@ -9,8 +9,7 @@ EVAL_INTERVAL_SECS = 10
 
 def evaluate():
 
-
-    im = cv2.imread('../../resources/temp/num9.jpg', cv2.IMREAD_GRAYSCALE).astype(np.float32)
+    im = cv2.imread('../../resources/temp/timg5.jpg', cv2.IMREAD_GRAYSCALE).astype(np.float32)
     im = cv2.resize(im, (28, 28))
     img_gray = (im - (255 / 2.0)) / 255
     x_img = np.reshape(img_gray, [-1, 784])
