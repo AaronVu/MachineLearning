@@ -10,8 +10,8 @@ EVAL_INTERVAL_SECS = 10
 def evaluate(mnist):
     x = tf.placeholder(tf.float32, [None, inference.INPUT_NODE], name="x-input")
     y_ = tf.placeholder(tf.float32, [None, inference.OUTPUT_NODE], name="y-input")
-    validate_feed = {x:mnist.validation.images,
-                     y_:mnist.validation.labels}
+    validate_feed = {x: mnist.validation.images,
+                     y_: mnist.validation.labels}
 
     y = inference.inference(x, None)
     correct_prediction = tf.equal(tf.argmax(y, 1), tf.argmax(y_, 1))

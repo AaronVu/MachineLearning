@@ -1,14 +1,12 @@
-#coding:utf-8
-
+# coding:utf-8
 import re
 import os
 import urllib
 from queue import Queue
-
 import urllib3
-
 import src.common.threads as threads
 import time
+
 
 class ReqUtil:
 
@@ -129,7 +127,7 @@ class ReqUtil:
     def support_point(self, url):
         req = urllib3.Request(url)
         req.add_header('Range', 'bytes=0-20')
-        res = urllib3.urlopen(req)
+        res = urllib2.urlopen(req)
         content_length = res.headers['Content-Length']
         content_range = res.headers['Content-Range']
         if content_length and content_range:
