@@ -1,7 +1,7 @@
-#coding:utf-8
-
+# coding:utf-8
 import tensorflow as tf
 from numpy.random import RandomState
+
 
 class BCP:
 
@@ -67,6 +67,7 @@ class BCP:
         print("训练之后结果：")
         print(self.sess.run(self.w1))
         print(self.sess.run(self.w2))
+
 
 if __name__ == '__main__':
     bcp = BCP()

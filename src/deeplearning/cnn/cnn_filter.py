@@ -35,7 +35,7 @@ bias = tf.nn.bias_add(conv, biases)
 actived_conv = tf.nn.relu(bias)
 
 #最大池化层的前向传播过程
-pool = tf.nn.max_pool(actived_conv, ksize = [1,2,3,1],strides=[1,2,2,1],padding='SAME')
+pool = tf.nn.max_pool(actived_conv, ksize=[1, 2, 3, 1],strides=[1, 2, 2, 1], padding='SAME')
 
 
 

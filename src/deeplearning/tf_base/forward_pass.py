@@ -1,6 +1,6 @@
-#coding:utf-8
-
+# coding:utf-8
 import tensorflow as tf
+
 
 class Forward:
 

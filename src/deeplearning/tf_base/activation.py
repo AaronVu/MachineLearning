@@ -1,6 +1,7 @@
 import tensorflow as tf
 from numpy.random import RandomState
 
+
 class Activation:
     '''
         非线性激活函数(提供网络的非线性建模能力)和偏置项
@@ -98,5 +99,6 @@ class Activation:
                 print(sess.run(w1))
 
 
-act = Activation()
-act.lossFunc()
+def test():
+    act = Activation()
+    act.lossFunc()
