@@ -3,9 +3,10 @@ import re
 import os
 import urllib
 from queue import Queue
-import urllib3
-import src.common.threads as threads
+import urllib.request as urllib2
+import common.threads as threads
 import time
+import http.cookiejar as cookielib
 
 
 class ReqUtil:
@@ -24,14 +25,14 @@ class ReqUtil:
     def doGet(self, url, data={}, header={}):
         data = urllib.urlencode(data)
         geturl = url + "?" + data
-        request = urllib3.Request(geturl)
+        request = urllib2.Request(geturl)
         for (key,val) in header:
             request.add_header(key, val)
         try:
-            response = urllib3.urlopen(request)
-        except urllib3.HTTPError as e:
+            response = urllib2.urlopen(request)
+        except urllib2.HTTPError as e:
             print(e.code)
-        except urllib3.URLError as e:
+        except urllib2.URLError as e:
             print(e.reason)
         else:
             print(response.read())
@@ -39,40 +40,40 @@ class ReqUtil:
 
     def doPost(self, url, data={},header={}):
         data = urllib.urlencode(data)
-        request = urllib3.Request(url, data, header)
-        response = urllib3.urlopen(request)
+        request = urllib2.Request(url, data, header)
+        response = urllib2.urlopen(request)
         print(response.read())
 
     def doPut(self, url, data={}):
-        request = urllib3.Request(url, data=data)
+        request = urllib2.Request(url, data=data)
         request.get_method = lambda: 'PUT'  # or 'DELETE'
-        response = urllib3.urlopen(request)
+        response = urllib2.urlopen(request)
         print(response.read())
 
     def doDelete(self, url, data={}):
-        request = urllib3.Request(url, data=data)
+        request = urllib2.Request(url, data=data)
         request.get_method = lambda: 'DELETE'
-        response = urllib3.urlopen(request)
+        response = urllib2.urlopen(request)
         print(response.read())
 
     def setProxy(self, proxy_info):
-        proxy_handler = urllib3.ProxyHandler({"http": "http://%(host)s:%(port)d"%proxy_info})
-        opener = urllib3.build_opener(proxy_handler)
-        urllib3.install_opener(opener)
+        proxy_handler = urllib2.ProxyHandler({"http": "http://%(host)s:%(port)d"%proxy_info})
+        opener = urllib2.build_opener(proxy_handler)
+        urllib2.install_opener(opener)
 
     def openDebug(self):
-        httpHandler = urllib3.HTTPHandler(debuglevel=1)
-        httpsHandler = urllib3.HTTPSHandler(debuglevel=1)
-        opener = urllib3.build_opener(httpHandler, httpsHandler)
-        urllib3.install_opener(opener)
+        httpHandler = urllib2.HTTPHandler(debuglevel=1)
+        httpsHandler = urllib2.HTTPSHandler(debuglevel=1)
+        opener = urllib2.build_opener(httpHandler, httpsHandler)
+        urllib2.install_opener(opener)
 
     def doHttpWithCookie(self, url, data={}, save_cookie = False):
         cookie = cookielib.CookieJar()
         cookie.load(self.cookie_filename, ignore_discard=True, ignore_expires=True)
         if save_cookie:
             cookie = cookielib.MozillaCookieJar(self.cookie_filename)
-        handler = urllib3.HTTPCookieProcessor(cookie)
-        opener = urllib3.build_opener(handler)
+        handler = urllib2.HTTPCookieProcessor(cookie)
+        opener = urllib2.build_opener(handler)
         response = opener.open(url)
         for item in cookie:
             print('Name = ' + item.name)
@@ -83,7 +84,7 @@ class ReqUtil:
     def downLoad(self, url): #单步下载
         print (u"文件下载中...")
         file_name = url.split('/')[-1]
-        u = urllib3.urlopen(url)
+        u = urllib2.urlopen(url)
         f = open(file_name, 'wb')
         meta = u.info()
         file_size = int(meta.getheaders("Content-Length")[0])
@@ -117,7 +118,7 @@ class ReqUtil:
 
             r = int(total_size) - point_size
             blocks = self.cutBlock(r)
-            self.block_queue = Queue.Queue()
+            self.block_queue = Queue()
             for i in range(len(blocks)):
                 th = threads.ReptilesThread('block'+str(i), url, blocks[i])
                 th.start()
@@ -125,7 +126,7 @@ class ReqUtil:
             self.link(filename, point_size)
 
     def support_point(self, url):
-        req = urllib3.Request(url)
+        req = urllib2.Request(url)
         req.add_header('Range', 'bytes=0-20')
         res = urllib2.urlopen(req)
         content_length = res.headers['Content-Length']
