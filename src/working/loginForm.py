@@ -8,8 +8,9 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+
 import src.common.CodeImageUtil
-import src.database.DBHelper
+import src.common.DBHelper
 import src.working.mainForm as mainForm
 
 try:
@@ -41,7 +42,7 @@ class Ui_Form(QtWidgets.QWidget):
         self.setGraphicsEffect(shadow);
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground);
         self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
-        self.dbutil = src.database.DBHelper.DBHelper()
+        self.dbutil = src.common.DBHelper.DBHelper()
         self.genImg.gen_img()
         pixMap = QtGui.QPixmap(self.genImg.imgName).scaled(self.codeImage.width(), self.codeImage.height())
         self.codeImage.setPixmap(pixMap)

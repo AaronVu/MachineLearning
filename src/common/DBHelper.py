@@ -1,9 +1,8 @@
-#coding: utf-8
-
+# coding: utf-8
 import pymysql
 import traceback
 import src.common.loadconf as config
-import os
+
 
 class DBHelper:
 
@@ -35,7 +34,7 @@ class DBHelper:
             print("Error: unable to fecth dataError: unable to fecth data")
             return  False
 
-    def checkLogin(self, username, pwd):
+    def check_login(self, username, pwd):
         strSql = "select user_name,user_password from tb_users where user_name='NAME_PARAM' and user_password='PWD_PARAM'"
         strSql = strSql.replace('NAME_PARAM',username)
         strSql =strSql.replace('PWD_PARAM',pwd)
@@ -48,8 +47,8 @@ class DBHelper:
             self.con.close()
 
 
-
-helper = DBHelper()
-print(helper.checkLogin("Tom","123456"))
-#print helper.query("select user_name,user_password from users where user_name='Tom' and user_password='123456'")
-helper.close()
+def test():
+    helper = DBHelper()
+    print(helper.checkLogin("Tom","123456"))
+    #print helper.query("select user_name,user_password from users where user_name='Tom' and user_password='123456'")
+    helper.close()

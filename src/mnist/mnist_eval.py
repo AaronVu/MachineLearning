@@ -34,6 +34,7 @@ def evaluate(mnist):
                 return
             time.sleep(EVAL_INTERVAL_SECS)
 
+
 def main(argv=None):
     mnist = input_data.read_data_sets("../../resources",one_hot=True)
     evaluate(mnist)
