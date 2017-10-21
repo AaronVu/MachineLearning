@@ -1,8 +1,7 @@
-
-#coding: utf-8
+# -*- coding:utf-8 -*-
 import random
-
 from PIL import Image,ImageFont,ImageDraw,ImageFilter
+
 
 class CodeImageGen:
 
@@ -14,16 +13,6 @@ class CodeImageGen:
         self.imgName = 'idencode.png'
         self.curCode = '****'
         self.font = ImageFont.truetype('C:\\WINDOWS\\Fonts\\SIMLI.TTF', 26)  # 验证码的字体和字体大小
-
-
-    def random_txt(self):
-        s = ''
-        for index in range(4):
-            if index == 0:
-                s += ' '
-            s += str(random.randint(0, 9))
-            s += ' '
-        return s
 
     def gen_img(self, width = 100, height = 32):
         self.width = width
@@ -40,13 +29,21 @@ class CodeImageGen:
         image.save(self.imgName)  # 保存验证码图片
 
     def draw_line(self, draw):
-
         fil = (255, 0, 0)
         for x in range(25):
             begin = (random.randint(0, self.width), random.randint(0, self.height))
             end = (random.randint(0, self.width), random.randint(0, self.height))
             draw.line([begin, end], fill=fil)
 
+    @staticmethod
+    def random_txt():
+        s = ''
+        for index in range(4):
+            if index == 0:
+                s += ' '
+            s += str(random.randint(0, 9))
+            s += ' '
+        return s
 
 #gen = CodeImageGen()
 #gen.gen_img()

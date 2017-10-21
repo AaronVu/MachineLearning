@@ -1,17 +1,6 @@
-#
-# script to register Python 2.0 or later for use with win32all
-# and other extensions that require Python registry settings
-#
-# written by Joakim Loew for Secret Labs AB / PythonWare
-#
-# source:
-# http://www.pythonware.com/products/works/articles/regpy20.htm
-#
-# modified by Valentine Gogichashvili as described in http://www.mail-archive.com/distutils-sig@python.org/msg10512.html
- 
+# -*- coding:utf-8 -*-
 import sys
- 
-from _winreg import *
+from winreg import *
  
 # tweak as necessary
 version = sys.version[:3]
@@ -23,6 +12,7 @@ pythonkey = "PythonPath"
 pythonpath = "%s;%s\\Lib\\;%s\\DLLs\\" % (
     installpath, installpath, installpath
 )
+
  
 def RegisterPy():
     try:
@@ -46,6 +36,7 @@ def RegisterPy():
     CloseKey(reg)
     print("*** Unable to register!")
     print("*** You probably have another Python installation!")
- 
+
+
 if __name__ == "__main__":
     RegisterPy()

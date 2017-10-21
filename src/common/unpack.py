@@ -46,7 +46,8 @@ def un_tar(file_name):
         tar.extract(name, file_name + "_files/")
     tar.close()
 
-def unpack(name):
+
+def unpack(file_name, name):
     if file_name.endswith('zip'):
         un_zip(name)
     elif file_name.endswith('gz'):
@@ -57,8 +58,10 @@ def unpack(name):
         print("Error File...")
     print("Unpack Success...")
 
-file_name = input("请输入文件路径: ")
-files = file_name.split(os.sep)
-name = files[len(files)-1]
-print("File Name Is %s ..."%(name))
-unpack(file_name)
+
+def main():
+    file_name = input("请输入文件路径: ")
+    files = file_name.split(os.sep)
+    name = files[len(files)-1]
+    print("File Name Is %s ..."%(name))
+    unpack(file_name)

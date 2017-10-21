@@ -1,5 +1,6 @@
-#coding:utf-8
+# coding:utf-8
 import paramiko
+
 
 class SSHClient:
 

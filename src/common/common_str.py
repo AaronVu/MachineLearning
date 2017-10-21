@@ -1,15 +1,16 @@
-#coding: utf-8
-
+# -*- coding:utf-8 -*-
 import re
+
 
 def strh(a, b, com_str):
     for i in range(0, len(a)):
         for j in range(0, len(b)):
             if a[i] == b[j]:
                 count_len(a[i], i, j, a, b, com_str)
-                
+
+
 def count_len(cur, i, j, a, b, com_str):
-    s = cur;
+    s = cur
     if i+1 == len(a) or j+1 == len(b) or a[i+1] != b[j+1]:
         index = com_str[0]
         if index == 0:
@@ -30,7 +31,8 @@ def count_len(cur, i, j, a, b, com_str):
     else:
         s = s+' '+a[i+1]
         count_len(s, i+1, j+1, a, b, com_str)
-        
+
+
 def common_ground(a, b):
     com_str = [0]
     if a is None or b is None or a.strip() == '' or b.strip() == '':
@@ -49,14 +51,15 @@ def common_ground(a, b):
     else:
         print(''.join(com_str[x]+' ' for x in range(1,len(com_str))))
 
-common_ground('Hello  world la', 'Hello world     lalala')
-common_ground('eat chicken', 'eat chicken and rice')
-common_ground('eat a burger and drink a coke', 'drink a coke')
-common_ground('i like trutles', 'what are you talking aboue')
-common_ground('aa bb', 'aa bb cc')
-common_ground('aa bb cc', 'bb cc')
-common_ground('aa bb cc', 'bb cc bb aa')
-common_ground('aa bb', 'cc dd')
-common_ground('aa bb', '')
-common_ground('', 'cc dd')
-common_ground('','')
+def test():
+    common_ground('Hello  world la', 'Hello world     lalala')
+    common_ground('eat chicken', 'eat chicken and rice')
+    common_ground('eat a burger and drink a coke', 'drink a coke')
+    common_ground('i like trutles', 'what are you talking aboue')
+    common_ground('aa bb', 'aa bb cc')
+    common_ground('aa bb cc', 'bb cc')
+    common_ground('aa bb cc', 'bb cc bb aa')
+    common_ground('aa bb', 'cc dd')
+    common_ground('aa bb', '')
+    common_ground('', 'cc dd')
+    common_ground('','')

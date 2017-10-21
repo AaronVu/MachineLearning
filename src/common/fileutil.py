@@ -1,8 +1,8 @@
-#coding: utf-8
-
+# -*- coding:utf-8 -*-
 import os
 import hashlib
 from PyQt5 import QtCore
+
 
 class FileUtil(QtCore.QObject):
     
@@ -26,7 +26,7 @@ class FileUtil(QtCore.QObject):
     def duplicate_checking(self, md5Map):
         dupMap = {}
         for key,val in md5Map.items():
-            if dupMap.has_key(val):
+            if val in dupMap:
                 files = dupMap[val]
                 files.append(key)
             else:
@@ -34,8 +34,6 @@ class FileUtil(QtCore.QObject):
                 files.append(key)
                 dupMap[val] = files
         return dupMap
-
-
 
     def listfiles(self, path, files=[]):
         list = os.listdir(path)
