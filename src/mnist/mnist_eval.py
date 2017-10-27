@@ -29,6 +29,7 @@ def evaluate(mnist):
                 global_step = ckpt.model_checkpoint_path.split('/')[-1].split('-')[-1]
                 accuracy_score = sess.run(accuracy, feed_dict=validate_feed)
                 print("After %s training steps, validation accuracy = %g"%(global_step, accuracy_score))
+                break
             else:
                 print("No checkpoint file found!")
                 return
@@ -36,8 +37,9 @@ def evaluate(mnist):
 
 
 def main(argv=None):
-    mnist = input_data.read_data_sets("../../resources",one_hot=True)
+    mnist = input_data.read_data_sets("../../resources", one_hot=True)
     evaluate(mnist)
+
 
 if __name__ == "__main__":
     tf.app.run()

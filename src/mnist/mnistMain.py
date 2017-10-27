@@ -65,17 +65,23 @@ def train_eval(path):
 
 
 def main(argv=None):
-    #evaluate('../../resources/test/12.png')
+    path = '../../resources/test/1.png'
+    index = path.split('/')[-1].split('.')[0]
+    with open('../../resources/qrc/label.txt') as f:
+        str_label = f.read()
+        labels = str_label.split(',')
+        print(labels[int(index)])
+    print(evaluate(path))
     #test()
-    files, labels = train_eval('../../resources/test')
-    for fileName in files:
-        index = fileName.split('.')[0]
-        num = evaluate('../../resources/test/'+fileName)
-        if num == labels[int(index)]:
-            print("Success")
-        else:
-            print('Failed')
-        #print(fileName, labels[int(index)])
+    # files, labels = train_eval('../../resources/test')
+    # for fileName in files:
+    #     index = fileName.split('.')[0]
+    #     num = evaluate('../../resources/test/'+fileName)
+    #     if num == labels[int(index)]:
+    #         print("Success")
+    #     else:
+    #         print('Failed')
+    #     #print(fileName, labels[int(index)])
 
 if __name__ == "__main__":
     main()
