@@ -30,7 +30,7 @@ class SSHClient:
 
     def upload(self, localpath, remotepath):
         try:
-            client = paramiko.Transport((self.ip,self.ip))
+            client = paramiko.Transport((self.ip, self.ip))
             client.connect(username=self.user, password=self.password)
             sftp = paramiko.SFTPClient.from_transport(client)
             sftp.put(localpath, remotepath)
@@ -48,5 +48,5 @@ class SSHClient:
             client.close()
             print("OK.")
         except:
-            print ("Error!")
+            print("Error!")
 

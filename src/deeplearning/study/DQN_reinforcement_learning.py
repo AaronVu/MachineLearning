@@ -1,14 +1,4 @@
-"""
-Know more, visit my Python tutorial page: https://morvanzhou.github.io/tutorials/
-My Youtube Channel: https://www.youtube.com/user/MorvanZhou
-More about Reinforcement learning: https://morvanzhou.github.io/tutorials/machine-learning/reinforcement-learning/
-
-Dependencies:
-tensorflow: 1.1.0
-matplotlib
-numpy
-gym: 0.8.1
-"""
+# -*- coding:utf-8 -*-
 import tensorflow as tf
 import numpy as np
 import gym

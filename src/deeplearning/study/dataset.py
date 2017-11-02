@@ -1,9 +1,4 @@
-"""
-Know more, visit my Python tutorial page: https://morvanzhou.github.io/tutorials/
-My Youtube Channel: https://www.youtube.com/user/MorvanZhou
-
-More information about Dataset: https://github.com/tensorflow/tensorflow/blob/master/tensorflow/docs_src/programmers_guide/datasets.md
-"""
+# -*- coding:utf-8 -*-
 import tensorflow as tf
 import numpy as np
 from tensorflow.contrib.data import Dataset

@@ -1,10 +1,4 @@
-"""
-Know more, visit my Python tutorial page: https://morvanzhou.github.io/tutorials/
-My Youtube Channel: https://www.youtube.com/user/MorvanZhou
-
-Dependencies:
-tensorflow: 1.1.0
-"""
+# -*- coding:utf-8 -*-
 import tensorflow as tf
 
 m1 = tf.constant([[2, 2]])

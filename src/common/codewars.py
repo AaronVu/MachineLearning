@@ -99,7 +99,7 @@ def spiralize(size):
     spiral = [[1] * size for _ in range(size)]
 
     def ok(y, x):
-        return y < size and x < size and y >= 0 and x >= 0 and spiral[y][x]
+        return y < size and x < size >= 0 and x >= 0 and spiral[y][x]
 
     y, x, dy, dx = 1, -1, 0, 1
     while ok(y + dy, x + dx):

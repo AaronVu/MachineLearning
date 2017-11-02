@@ -49,7 +49,8 @@ def common_ground(a, b):
     if len(com_str) == 1:
         print("death")
     else:
-        print(''.join(com_str[x]+' ' for x in range(1,len(com_str))))
+        print(''.join(com_str[x]+' ' for x in range(1, len(com_str))))
+
 
 def test():
     common_ground('Hello  world la', 'Hello world     lalala')
@@ -62,4 +63,5 @@ def test():
     common_ground('aa bb', 'cc dd')
     common_ground('aa bb', '')
     common_ground('', 'cc dd')
-    common_ground('','')
+
+

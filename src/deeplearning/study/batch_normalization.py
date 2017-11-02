@@ -1,12 +1,4 @@
-"""
-Know more, visit my Python tutorial page: https://morvanzhou.github.io/tutorials/
-My Youtube Channel: https://www.youtube.com/user/MorvanZhou
-
-Dependencies:
-tensorflow: 1.1.0
-matplotlib
-numpy
-"""
+# -*- coding:utf-8 -*-
 import tensorflow as tf
 import numpy as np
 import matplotlib.pyplot as plt
