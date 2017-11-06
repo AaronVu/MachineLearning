@@ -1,14 +1,4 @@
-"""
-This part of code is the Deep Q Network (DQN) brain.
-
-view the tensorboard picture about this DQN structure on: https://morvanzhou.github.io/tutorials/machine-learning/reinforcement-learning/4-3-DQN3/#modification
-
-View more on my tutorial page: https://morvanzhou.github.io/tutorials/
-
-Using:
-Tensorflow: r1.2
-"""
-
+# -*- coding:utf-8 -*-
 import numpy as np
 import tensorflow as tf
 

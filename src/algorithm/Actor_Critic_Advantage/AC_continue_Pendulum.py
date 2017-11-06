@@ -1,16 +1,4 @@
-"""
-Actor-Critic with continuous action using TD-error as the Advantage, Reinforcement Learning.
-
-The Pendulum example (based on https://github.com/dennybritz/reinforcement-learning/blob/master/PolicyGradient/Continuous%20MountainCar%20Actor%20Critic%20Solution.ipynb)
-
-Cannot converge!!! oscillate!!!
-
-View more on my tutorial page: https://morvanzhou.github.io/tutorials/
-
-Using:
-tensorflow r1.3
-gym 0.8.0
-"""
+# -*- coding:utf-8 -*-
 
 import tensorflow as tf
 import numpy as np

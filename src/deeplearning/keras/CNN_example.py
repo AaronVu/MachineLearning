@@ -1,13 +1,3 @@
-"""
-To know more or get code samples, please visit my website:
-https://morvanzhou.github.io/tutorials/
-Or search: 莫烦Python
-Thank you for supporting!
-"""
-
-# please note, all tutorial code are running under python3.5.
-# If you use the version like python2.7, please modify the code accordingly
-
 # 6 - CNN example
 
 # to try tensorflow, un-comment following two lines

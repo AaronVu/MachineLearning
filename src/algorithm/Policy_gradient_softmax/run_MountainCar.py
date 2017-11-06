@@ -1,17 +1,7 @@
-"""
-Policy Gradient, Reinforcement Learning.
-
-The cart pole example
-
-View more on my tutorial page: https://morvanzhou.github.io/tutorials/
-
-Using:
-Tensorflow: 1.0
-gym: 0.8.0
-"""
+# -*- coding:utf-8 -*-
 
 import gym
-from RL_brain import PolicyGradient
+from algorithm.Policy_gradient_softmax.RL_brain import PolicyGradient
 import matplotlib.pyplot as plt
 
 DISPLAY_REWARD_THRESHOLD = -2000  # renders environment if total episode reward is greater then this threshold

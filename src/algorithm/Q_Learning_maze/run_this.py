@@ -1,19 +1,7 @@
-"""
-Reinforcement learning maze example.
+# -*- coding:utf-8 -*-
 
-Red rectangle:          explorer.
-Black rectangles:       hells       [reward = -1].
-Yellow bin circle:      paradise    [reward = +1].
-All other states:       ground      [reward = 0].
-
-This script is the main part which controls the update method of this example.
-The RL is in RL_brain.py.
-
-View more on my tutorial page: https://morvanzhou.github.io/tutorials/
-"""
-
-from maze_env import Maze
-from RL_brain import QLearningTable
+from algorithm.Q_Learning_maze.maze_env import Maze
+from algorithm.Q_Learning_maze.RL_brain import QLearningTable
 
 
 def update():

@@ -1,16 +1,8 @@
-"""
-Dueling DQN & Natural DQN comparison
-
-View more on my tutorial page: https://morvanzhou.github.io/tutorials/
-
-Using:
-Tensorflow: 1.0
-gym: 0.8.0
-"""
+# -*- coding:utf-8 -*-
 
 
 import gym
-from RL_brain import DuelingDQN
+from algorithm.Dueling_DQN.RL_brain import DuelingDQN
 import numpy as np
 import matplotlib.pyplot as plt
 import tensorflow as tf

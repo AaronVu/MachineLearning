@@ -1,4 +1,3 @@
-# visit https://morvanzhou.github.io/tutorials/ for more!
 
 
 # 22 scope (name_scope/variable_scope)

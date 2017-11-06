@@ -1,9 +1,4 @@
-"""
-This part of code is the Dyna-Q learning brain, which is a brain of the agent.
-All decisions and learning processes are made in here.
-
-View more on my tutorial page: https://morvanzhou.github.io/tutorials/
-"""
+# -*- coding:utf-8 -*-
 
 import numpy as np
 import pandas as pd

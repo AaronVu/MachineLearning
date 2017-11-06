@@ -1,14 +1,8 @@
-"""
-Deep Q network,
-
-Using:
-Tensorflow: 1.0
-gym: 0.7.3
-"""
+# -*- coding:utf-8 -*-
 
 
 import gym
-from RL_brain import DeepQNetwork
+from algorithm.OpenAI_gym.RL_brain import DeepQNetwork
 
 env = gym.make('CartPole-v0')
 env = env.unwrapped

@@ -1,15 +1,4 @@
-"""
-This part of code is the reinforcement learning brain, which is a brain of the agent.
-All decisions are made in here.
-
-Policy Gradient, Reinforcement Learning.
-
-View more on my tutorial page: https://morvanzhou.github.io/tutorials/
-
-Using:
-Tensorflow: 1.0
-gym: 0.8.0
-"""
+# -*- coding:utf-8 -*-
 
 import numpy as np
 import tensorflow as tf

@@ -1,6 +1,3 @@
-# please note, all tutorial code are running under python3.5.
-# If you use the version like python2.7, please modify the code accordingly
-
 # 5 - Classifier example
 
 import numpy as np

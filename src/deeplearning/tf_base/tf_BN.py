@@ -1,6 +1,4 @@
 """
-visit https://morvanzhou.github.io/tutorials/ for more!
-
 Build two networks.
 1. Without batch normalization
 2. With batch normalization

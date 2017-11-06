@@ -1,14 +1,4 @@
-"""
-Double DQN & Natural DQN comparison,
-The Pendulum example.
-
-View more on my tutorial page: https://morvanzhou.github.io/tutorials/
-
-Using:
-Tensorflow: 1.0
-gym: 0.8.0
-"""
-
+# -*- coding:utf-8 -*-
 
 import gym
 from RL_brain import DoubleDQN

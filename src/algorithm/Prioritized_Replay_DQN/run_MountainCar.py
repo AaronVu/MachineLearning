@@ -1,16 +1,8 @@
-"""
-The DQN improvement: Prioritized Experience Replay (based on https://arxiv.org/abs/1511.05952)
-
-View more on my tutorial page: https://morvanzhou.github.io/tutorials/
-
-Using:
-Tensorflow: 1.0
-gym: 0.8.0
-"""
+# -*- coding:utf-8 -*-
 
 
 import gym
-from RL_brain import DQNPrioritizedReplay
+from algorithm.Prioritized_Replay_DQN.RL_brain import DQNPrioritizedReplay
 import matplotlib.pyplot as plt
 import tensorflow as tf
 import numpy as np

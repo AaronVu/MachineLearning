@@ -1,12 +1,4 @@
-"""
-The Dueling DQN based on this paper: https://arxiv.org/abs/1511.06581
-
-View more on my tutorial page: https://morvanzhou.github.io/tutorials/
-
-Using:
-Tensorflow: 1.0
-gym: 0.8.0
-"""
+# -*- coding:utf-8 -*-
 
 import numpy as np
 import tensorflow as tf
