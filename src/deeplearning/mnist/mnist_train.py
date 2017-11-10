@@ -1,8 +1,10 @@
 #coding:utf-8
 import os
+
 import tensorflow as tf
 from tensorflow.examples.tutorials.mnist import input_data
-import src.mnist.mnist_inference as infrence
+
+import deeplearning.mnist.mnist_inference as infrence
 
 BATCH_SIZE = 100
 LEARNING_RATE_BASE = 0.8

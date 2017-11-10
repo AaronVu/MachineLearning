@@ -1,12 +1,12 @@
 #coding:utf-8
-import tensorflow as tf
-import src.mnist.mnist_inference as inference
-import src.mnist.mnist_train as train
 import cv2
 import numpy as np
+import src.mnist.mnist_train as train
+import tensorflow as tf
 from PIL import Image
 from tensorflow.examples.tutorials.mnist import input_data
 
+import deeplearning.mnist.mnist_inference as inference
 
 EVAL_INTERVAL_SECS = 10
 
