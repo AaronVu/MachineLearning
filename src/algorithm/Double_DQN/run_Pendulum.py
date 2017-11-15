@@ -1,7 +1,7 @@
 # -*- coding:utf-8 -*-
 
 import gym
-from RL_brain import DoubleDQN
+from algorithm.Double_DQN.RL_brain import DoubleDQN
 import numpy as np
 import matplotlib.pyplot as plt
 import tensorflow as tf
