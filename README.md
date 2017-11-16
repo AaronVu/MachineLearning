@@ -1,7 +1,8 @@
 # vme-<a href='http://wiki.jikexueyuan.com/project/tensorflow-zh/get_started/basic_usage.html'>tensorflow</a>
 
-<img src="http://img1.imgtn.bdimg.com/it/u=297960576,763912969&fm=27&gp=0.jpg">
-
+<div align="center">
+<img src="https://raw.githubusercontent.com/Meinin/vme-tensorflow/master/resources/img/note.jpg"  alt="AI" />
+</div>
 
 ## 一、python基础篇
 ### 1、numpy&pandas
