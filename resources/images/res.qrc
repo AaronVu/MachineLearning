@@ -1,0 +1,9 @@
+<RCC>
+  <qresource prefix="images">
+    <file>tianyi-0.png</file>
+    <file>tianyi-1.png</file>
+    <file>tianyi-2.png</file>
+    <file>tianyi-3.png</file>
+    <file>tianyi-4.png</file>
+  </qresource>
+</RCC>
