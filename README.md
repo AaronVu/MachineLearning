@@ -13,9 +13,9 @@
  ### 1、基础算法(算法导论)
  ### 2、强化学习算法
  
-<span>
-注:后续会将这些应用到语音识别、图片处理和NLP中，
-最后会出一个类似DeepMind的人造大脑(界面会在ui包中，主要是一个桌面应用)
+<span style="color:'red'">
+Note: these applications will be applied to speech recognition, image processing and NLP.
+Finally, a human-made brain similar to DeepMind (the interface will be in the UI package, mainly a desktop application)
 <span>
 
 
