@@ -4,7 +4,7 @@
 
 # <a href='http://www.tensorfly.cn/tfdoc/tutorials/overview.html'>vme</a>-<a href='http://wiki.jikexueyuan.com/project/tensorflow-zh/get_started/basic_usage.html'>tensorflow</a>
 
-## 一、python基础篇
+## 一、基础库
 ### 1、numpy&pandas
 ### 2、matplotlib
 
