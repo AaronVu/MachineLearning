@@ -7,7 +7,6 @@ import tensorflow as tf
 np.random.seed(1)
 tf.set_random_seed(1)
 
-
 # Deep Q Network off-policy
 class DeepQNetwork:
     def __init__(
