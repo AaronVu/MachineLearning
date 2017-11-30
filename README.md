@@ -24,7 +24,7 @@ Note: these applications will be applied to speech recognition, image processing
 Finally, a human-made brain similar to DeepMind (the interface will be in the UI package, mainly a desktop application)
 <span>
 
-**A collection of awesome lists for hackers, pentesters & security researchers.**
+**A collection for hackers, pentesters & security researchers.**
 
 Repository | Description
 ---- | ----
