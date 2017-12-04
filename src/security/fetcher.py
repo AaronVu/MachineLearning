@@ -19,7 +19,7 @@ def downloadImages(imgTag):
         imgSrc = ('http:'+imgTag['src'])
         imgContent = urllib2.urlopen(imgSrc).read()
         imgFileName = basename(urlsplit(imgSrc)[2])
-        imgFile = open(imgFileName, 'wb')
+        imgFile = open("F://"+imgFileName, 'wb')
         imgFile.write(imgContent)
         imgFile.close()
         return imgFileName
