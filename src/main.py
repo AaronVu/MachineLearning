@@ -4,7 +4,6 @@ from PyQt5 import QtWidgets
 from ui.tianyi import TianYi
 
 
-
 def main():
     app = QtWidgets.QApplication(sys.argv)
     window = TianYi()
