@@ -155,28 +155,28 @@ def icmp_ping(ip_addr, timeout = 2, count = 4):
     send ping to ip_addr for count times with the given timeout
     """
     for i in range(count):
-        print 'ping ' + cmd,
+        print('ping ' + cmd,)
         try:
             delay = ping_once(ip_addr, timeout)
-        except socket.gaierror, e:
-            print "failed. (socket error: '%s')" % e[1]
+        except socket.gaierror as e:
+            print("failed. (socket error: '%s')" % e[1])
             break
 
         if delay == None:
-            print 'failed. (timeout within %s second.)' % timeout
+            print('failed. (timeout within %s second.)' % timeout)
         else:
-            print 'get reply in %0.4f ms' % (delay * 1000)
+            print( 'get reply in %0.4f ms' % (delay * 1000))
 
 
 # main
 if __name__ == '__main__':
     if ctypes.windll.shell32.IsUserAnAdmin() == 0:
-        print 'Sorry! You should run this with administrative privileges.'
+        print ('Sorry! You should run this with administrative privileges.')
         sys.exit()
 
     while True:
         try:
-            cmd = raw_input('Please input the ip address you want to ping: ')
+            cmd = input('Please input the ip address you want to ping: ')
             if cmd == '':
                 break
             icmp_ping(cmd)

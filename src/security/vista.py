@@ -1,5 +1,6 @@
 # coding:utf-8
 import sys, os, re
+import urllib
 from winreg import OpenKey, HKEY_LOCAL_MACHINE, EnumKey, EnumValue, CloseKey, QueryValueEx
 
 #wifi记录

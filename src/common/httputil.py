@@ -10,12 +10,11 @@ import http.cookiejar as cookielib
 
 
 class ReqUtil:
-
     cookie_filename = 'cookie.txt'
     thread_count = 5
     file_suffix = '.temp'
 
-    def __init__(self, timeout = 10, enable_proxy = False, proxy_info = {}):
+    def __init__(self, timeout=10, enable_proxy=False, proxy_info={}):
         self.enable_proxy = enable_proxy
         self.timeout = timeout
         if enable_proxy and len(proxy_info) > 1:

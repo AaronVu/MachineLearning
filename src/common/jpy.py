@@ -107,7 +107,7 @@ def main():
     encryptor = Encryptor()
     en = encryptor.aes_encode("SCOTT", Encryptor.NAME_KEY, has_next=True)
     print(en)
-    de = encryptor.aes_decode('0B92AA4029CADA31A7319EACE2D99F91', Encryptor.NAME_KEY)
+    de = encryptor.aes_decode(en, Encryptor.NAME_KEY)
     print(de)
 
 

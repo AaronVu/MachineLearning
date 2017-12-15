@@ -1,6 +1,7 @@
 # -*- coding:utf-8 -*-
 import sys
 
+import nmap
 
 if sys.version_info.major == 2:
     try:
