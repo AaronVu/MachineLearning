@@ -14,7 +14,7 @@ Your contributions are always welcome !
  ### 4、MNIST
 
 ## 三、algorithms
- ### 1、最小二乘法
+ ### 1、Least squares
  ### 1、Q-learning
  ### 2、Sarsa&Sarsa_lambda
  ### 3、A3C
