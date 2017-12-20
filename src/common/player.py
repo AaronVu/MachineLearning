@@ -1,7 +1,9 @@
 # -*- coding:utf-8 -*-
 from PyQt5.QtMultimedia import QMediaPlayer, QMediaPlaylist, QMediaContent
 from PyQt5 import QtCore, QtWidgets
-import sys, os, random
+import os
+import sys
+import random
 
 files = os.walk('..\\..\\resources\\sound')
 
