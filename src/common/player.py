@@ -3,7 +3,7 @@ from PyQt5.QtMultimedia import QMediaPlayer, QMediaPlaylist, QMediaContent
 from PyQt5 import QtCore, QtWidgets
 import sys, os, random
 
-files = os.walk('..\\resources\\sound')
+files = os.walk('..\\..\\resources\\sound')
 
 play_list = []
 

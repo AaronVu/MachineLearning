@@ -1,7 +1,7 @@
+# -*- coding:utf-8 -*-
 import tensorflow as tf
 import numpy as np
 import PIL.Image
-from io import StringIO
 from IPython.display import clear_output, Image, display
 
 
@@ -9,15 +9,10 @@ def DisplayArray(a, fmt='jpeg', rng=[0, 1]):
     """Display an array as a picture."""
     a = (a - rng[0]) / float(rng[1] - rng[0]) * 255
     a = np.uint8(np.clip(a, 0, 255))
-    # # PIL.Image.fromarray(a).show()
-    # display(PIL.Image.fromarray(a))
-    # # display(Image(data=f.getvalue()))
-    f = StringIO()
-    img = PIL.Image.fromarray(a)
-    img.save(f, fmt)
-    img.sa
-    print(type(f.getvalue()))
-    display(Image(data=f.getvalue()))
+    PIL.Image.fromarray(a, mode="L").show()
+    # f = StringIO()
+    # PIL.Image.fromarray(a, mode="L").save(f, fmt)
+    # display(Image(data=f.getvalue()))
 
 
 def make_kernel(a):
