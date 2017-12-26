@@ -20,6 +20,64 @@ Your contributions are always welcome !
  ### 3、A3C
  ### 4、Reinforcement Learning
  
+ # ML:Linear Regression
+NOTE | MATH | LATEX
+ ---- | ---- | ----
+ Hypothesis Function | ![HF](resources/math_img/Hypothesis.gif)   | \hat{y}=h_\theta(x)=\theta_0+\theta_1x
+ Cost Function       | ![CF](resources/math_img/Cost.gif)         | J(\theta_0,\theta_1)=\frac{1}{2m}\sum_{i=1}^{m}(\hat{y}_i-y_i)^2=\frac{1}{2m}\sum_{i=1}^{m}(h_\theta(x_i)-y_i)^2
+ Goal                | Minimize ![G](resources/math_img/Goal.gif) | J(\theta_0,\theta_1)
+---
+# ML:Gradient Descent
+### repeat until convergence {
+![GD](resources/math_img/Gd.gif) 
+#### for j = 0 and j = 1
+##### Latex: \theta_j:=\theta_j-\alpha\frac{\delta}{\delta\theta_j}J(\theta_0, \theta_1)
+### }
+### processes:
+![1](resources/math_img/pro_1.gif)
+![2](resources/math_img/pro_2.gif)
+##### Latex: \frac{\delta}{\delta\theta_j}J(\theta_0, \theta_1)=\frac{\delta}{\delta\theta_j}\frac{1}{2m}\sum_{i=1}^{m}(h\theta(x^i)-y^i)^2=\frac{\delta}{\delta\theta_j}\frac{1}{2m}\sum_{i=1}^{m}(\theta_0+\theta_1x^i-y^i)^2
+### when j = 0:
+![j=0](resources/math_img/when_0.gif)
+##### Latex: \frac{\delta}{\delta\theta_0}J(\theta_0, \theta_1)
+### when j = 1:
+![j=1](resources/math_img/when_1.gif)
+##### Latex: \frac{\delta}{\delta\theta_1}J(\theta_0, \theta_1)
+
+## Update Values of θ:
+### repeat until convergence{
+![r1](resources/math_img/r_0.gif)
+##### Latex: \theta_0:=\theta_0-\alpha\frac{1}{m}\sum_{i=1}^{m}(h_\theta(x^i)-y^i)
+![r2](resources/math_img/r_1.gif)
+##### Latex: \theta_1:=\theta_1-\alpha\frac{1}{m}\sum_{i=1}^{m}(h_\theta(x^i)-y^i)x^i
+### } 
+# Normal Equation
+![ne](resources/math_img/ne.gif)
+##### \theta=(X^TX)^{-1}X^Ty
+# RL: Q-Learning
+![r2](resources/math_img/q-learning.png)
+* α: learning rate
+* γ: discount factor(0<= γ<=1)
+* ε-greedy: the probability of decision making according to the optimal strategy
+* Q(S', a): Q real
+* Q(S, A): Q estimation
+# RL: Sarsa Learning
+# RL: Sarsa-lambda
+# RL: Deep Q Network(DQN)
+# RL: Double DQN
+# RL: Dueling DQN 
+# RL: Actor Critic
+# RL: Policy Gradients
+# RL: Deep Deterministic Policy Gradient(DDPG)
+# RL: Asynchronous Advantage Actor-Critic(A3C) Latex:
+# RL: Distributed Proximal Policy Optimization(DPPO)
+
+---
+### Helper:
+*[LaTex](http://www.mohu.org/info/symbols/symbols.htm)*
+*[MathJax](http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default)*
+
+ ---
 <span style="color:'red'">
 Note: these applications will be applied to speech recognition, image processing and NLP.
 Finally, a human-made brain similar to DeepMind (the interface will be in the UI package, mainly a desktop application)
