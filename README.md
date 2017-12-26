@@ -1,8 +1,6 @@
-![Supreme Creation](resources/img/note.jpg)
-
-# [Supreme-Creation](https://github.com/werayu/Supreme-Creation)
+![Fetax-Learning](resources/img/note.jpg)
+# [Fetax-Learning](https://github.com/werayu/Supreme-Creation)
 Your contributions are always welcome !
-
 # BASE: Python Package
 ### 1、[numpy](https://docs.scipy.org/doc/numpy-1.13.0/reference/)&[pandas](http://pandas.pydata.org/pandas-docs/stable/api.html)
 ### 2、[matplotlib](https://matplotlib.org/index.html)
