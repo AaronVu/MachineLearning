@@ -3,23 +3,10 @@
 # [Supreme-Creation](https://github.com/werayu/Supreme-Creation)
 Your contributions are always welcome !
 
-## 一、base
-### 1、numpy&pandas
-### 2、matplotlib
-
-## 二、tensorflow
- ### 1、RNN
- ### 2、LSTM
- ### 3、CNN
- ### 4、MNIST
-
-## 三、algorithms
- ### 1、Least squares
- ### 1、Q-learning
- ### 2、Sarsa&Sarsa_lambda
- ### 3、A3C
- ### 4、Reinforcement Learning
- 
+# BASE: Python Package
+### 1、[numpy](https://docs.scipy.org/doc/numpy-1.13.0/reference/)&[pandas](http://pandas.pydata.org/pandas-docs/stable/api.html)
+### 2、[matplotlib](https://matplotlib.org/index.html)
+### 3、[tensorflow](https://www.tensorflow.org/)
  # ML:Linear Regression
 NOTE | MATH | LATEX
  ---- | ---- | ----
