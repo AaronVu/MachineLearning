@@ -20,7 +20,6 @@ class ReqUtil:
         if enable_proxy and len(proxy_info) > 1:
             self.setProxy(proxy_info)
 
-
     def doGet(self, url, data={}, header={}):
         data = urllib.urlencode(data)
         geturl = url + "?" + data
@@ -35,7 +34,6 @@ class ReqUtil:
             print(e.reason)
         else:
             print(response.read())
-
 
     def doPost(self, url, data={},header={}):
         data = urllib.urlencode(data)

@@ -13,7 +13,7 @@ def list_files(path, allFile):
 
 
 def exec_cmd(cmd):
-    m = os.popen('ipconfig','r')
+    m = os.popen('ipconfig', 'r')
     for line in m:
         print (re.findall(r'', line.rstrip()))
     m.close()
