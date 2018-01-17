@@ -1,13 +1,5 @@
 # -*- coding:utf-8 -*-
-import inspect
 from wsgiref.simple_server import make_server
-
-
-class Controller:
-    NAME = "Controller"
-    TYPE = "WebApp Controller"
-    SUCCESS = 1
-    FAILE = 0
 
 
 class WebApplication:
@@ -28,7 +20,6 @@ class WebApplication:
 
     def _invoke(self, env):
         path = env['PATH_INFO']
-        # args = env['QUERY_STRING']
         return self.send_file(path[1:])
 
     def not_found(self):

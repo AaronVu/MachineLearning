@@ -1,5 +1,16 @@
+# -*- coding:utf-8 -*-
 import re
 import os
+import datetime
+
+
+def format_time():
+    days = []
+    day = datetime.date.today()
+    for _ in range(732):
+        day = day + datetime.timedelta(days=-1)
+        days.append(day.strftime('%Y-%m-%d'))
+    print(days)
 
 
 def list_files(path, allFile):
