@@ -1,5 +1,5 @@
-![Fetax-Learning](resources/img/note.jpg)
-# [Fetax-Learning](https://github.com/werayu/Supreme-Creation)
+![MachineLearning](resources/img/note.jpg)
+# [MachineLearning](https://github.com/fetaxyu/MachineLearning)
 Your contributions are always welcome !
 # BASE: Python Package
 ### 1、[numpy](https://docs.scipy.org/doc/numpy-1.13.0/reference/)&[pandas](http://pandas.pydata.org/pandas-docs/stable/api.html)
