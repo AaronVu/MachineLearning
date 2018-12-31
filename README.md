@@ -46,16 +46,6 @@ NOTE | MATH | LATEX
 * ε-greedy: the probability of decision making according to the optimal strategy
 * Q(S', a): Q real
 * Q(S, A): Q estimation
-# RL: Sarsa Learning
-# RL: Sarsa-lambda
-# RL: Deep Q Network(DQN)
-# RL: Double DQN
-# RL: Dueling DQN 
-# RL: Actor Critic
-# RL: Policy Gradients
-# RL: Deep Deterministic Policy Gradient(DDPG)
-# RL: Asynchronous Advantage Actor-Critic(A3C) Latex:
-# RL: Distributed Proximal Policy Optimization(DPPO)
 
 ---
 ### Helper:
